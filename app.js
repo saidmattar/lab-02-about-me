@@ -52,3 +52,23 @@ for (var i = 0; i < 4; i++) {
   }
 }
 }
+var statesIlivedIn = ['New York','Florida', 'California', 'Texas'];
+var trueGuess = false;
+for (var numOfTries = 0; numOfTries < 3; numOfTries++) {
+  console.log('outer for loop', numOfTries);
+  var userGuess = prompt(' Can you guess a one State i lived in beside Whashington?!');
+
+  for (var i = 0; i < statesIlivedIn.length; i++) {
+     if (userGuess === statesIlivedIn[i]) {
+     console.log('if');
+     alert('Great gguess I have lived in ' + statesIlivedIn );
+     i = statesIlivedIn.length;
+     trueGuess = true;
+     numOfTries = 3;
+  }
+}
+  if(trueGuess == false) {
+
+   alert('Wrong Guess');
+ }
+}
